@@ -1,0 +1,42 @@
+
+
+## 2.
+a. The result in this paper displays the percentage of adults over 18 with a “body mass index” greater than 25 in different years. Overall, the BMI has been increasing as years passed but it becomes steady. It decreases a little and remain stable since 2003.
+
+b. it violates the principle "show the data", since it does not display any pattern for the eyes to see rather than numbers. It also doesn't "make patterns easy to see". We cannot know the distribution of the BMI.
+
+c. in R script
+
+## 3b.
+Males might mate with more females of the same sample so they have higher mean reproductive success.
+
+## 5.
+8/9 identify correctly.
+a. Null hypothesis: mothers identify their children's shirts at an equal proportion of 0.5.
+b. Alternative hypothesis: mothers identify their children's shirts at a different proportion than 0.5.
+c. In this case, there is success rate, and binary choices, we choose the binomial test
+d. following the graph, we get 0.018 of exactly correct identifications
+e. following the graph, we get:
+0.018+0.002 => 0.02
+f. since this is the two sided test, we calculate the 2.5% percentile of each side:
+(0.002+0.018)*2 => 0.04
+p value therefore equals 0.04
+g. P value is significant here since 0.04 <0.05, so we reject the null hypothesis and conclude that mothers identify their children's shirts at a different proportion than 0.5.
+h. the sample size is very small (9) so the CI score can be quite large. Therefore the test result has to be considered seriously.
+
+## 6.
+proportion: 
+6101/9821 => 0.6212
+a. To calculate CI, we have: 
+Standard error of the mean = SEM = √x(N-x)/N3 = 0.005
+α = (1-0.95)/2 => 0.025
+Standard normal deviate for α = Zα = 1.960
+Lower bound = P - (Z*SEM) = 0.612
+Upper bound = P + (Z*SEM) = 0.631
+
+b. Since the CI value is 0.61 < x < 0.631, it is not a 50:50 chance of the toast landing butter side down or side up.
+
+## 7. 
+a. null hypothesis:  the proportion of individuals immobilized is the same between the blue liquid toxic and the liquid from the termites.
+- alternative hypothesis: the proportion of individuals immobilized is different between the blue liquid toxic and the liquid from the termites.
+

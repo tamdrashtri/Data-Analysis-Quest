@@ -1,0 +1,175 @@
+---
+title: "Assignment/Homework 2 - Tam Nguyen"
+output: html_document
+  
+---
+
+```{r setup, include = FALSE}
+library(tidyverse)
+library(psych)
+```
+
+#### 1.
+
+a. this is a histogram
+b. the mean is about 630 yards/min. This is because the graph looks like the normal distribution and the mean tends to lie around the middle of the graph.
+c. The median is the middle place, so the value I approximate is about 630 yards/min. This is because the graph is close to the normal distribution and in this case the median tends to have similar values with the mean.
+d. The mode is the highest value so it's around 1000 yards/min. I calculated it by seeing the highest bar.
+e. 
+
+#### 2.
+
+```{r}
+library(readr)
+ReproductiveSuccess <- read_csv("SparrowReproductiveSuccess.csv")
+ReproductiveSuccess %>%
+  split(.$sex) %>% 
+  map(summary) %>% 
+  map_dbl("r.squared")
+male <- filter(ReproductiveSuccess, sex == "male")
+female <- filter(ReproductiveSuccess, sex == "female")
+```
+a. mean for male: 1.51
+mean for female: 1.69
+
+--> females have higher mean of lifetime reproductive success.
+
+b.  
+
+```{r}
+
+mean(male$lifetimeRS)
+mean(female$lifetimeRS)
+var(male$lifetimeRS)
+var(female$lifetimeRS)
+``` 
+
+c. females have a higher variance in reproductive success. 
+
+e. Variance for male: 3.53.
+variance for female: 4.34
+
+```{r}
+male4 <- filter(male, male$lifetimeRS >= 4)
+female4 <- filter(female, female$lifetimeRS >= 4)
+var(male4$lifetimeRS)
+var(female4$lifetimeRS)
+```
+for males >= 4, variance is 0.38
+for female >= 4, variance is 2.03
+
+#### 3. 
+
+```{r}
+male <- filter(ReproductiveSuccess, sex == "male")
+female <- filter(ReproductiveSuccess, sex == "female")
+```
+
+```{r}
+# for man
+6.7/sqrt(4620)
+4.6/sqrt(6228)
+```
+a. SE in men is 0.1, SE in woman is 0.06
+b. In terms of variation among men in the number of sexual partner, the standard deviation is a better descriptor because it describes the variation of all males in the sample.
+c. in terms of the uncertainty of the estimated mean number of partners in woman, the standard error is a better descriptor because it helps to quantify the variations and uncertainty of the mean.
+d. 
+
+
+
+#### 4.
+
+```{r}
+beetles <- read_csv("Corpseflowers.csv")
+describe(beetles$numberOfBeetles)
+```
+a. 
+mean = 70.1
+
+sd = 48.5
+
+b.
+
+se = 15.34
+
+```{r}
+70.1+15.34 #upper
+70.1-15.34 #lower
+```
+c. 
+upper limit: 85.44
+lower limit: 54.76
+
+d. if the distribution is normal, if given 25 data points, the sampling distribution of the sample mean will be normal and will stay the same.
+e. the standard deviation would get smaller as there are more data points.
+f. the standard error would be smaller when there are 25 data points instead of 10
+
+g.
+
+```{r}
+barplot(beetles$numberOfBeetles)
+
+```
+
+```{r}
+
+n25 <- round(rnorm(25, mean = 70.1, sd = 48.5))
+n50 <-  round(rnorm(50, mean = 70.1, sd = 48.5))
+n100 <-  round(rnorm(100, mean = 70.1, sd = 48.5))
+
+describe(n25)
+describe(n50)
+describe(n100)
+```
+when n = 25, everything is smaller for mean, sd and SE.
+
+when n = 50, everything is smaller, but the mean is closer to when n = 10.
+
+when n 100, everything is smaller, except the mean is almost exactly equal the mean when n = 10.
+
+
+#### 5.
+
+a strip bar shows every individual data point, which make it easier to visualise outliers in the each of the variable. The bar plot, on the other hand, obscures a lot of information so I think the strip bar is superior.
+
+
+#### 6.
+
+a. coach has the longest hugs, while competitor has the shortest hugs. These values only show sample estimates because this is taken from a sample
+
+```{r}
+3.96/sqrt(77)
+2.76/sqrt(75)
+1.13/sqrt(33)
+```
+
+b. SE of coach: 0.45
+
+SE of Supporter: 0.32
+
+SE of competitor: 0.20
+
+These values measure the uncertainty or the standard deviation of the sampling distribution of the sample mean.
+
+c.
+
+Assumptions:
+
+I assume that each of these samples has a normal distribution.
+
+d.
+
+```{r}
+1.81+0.45*2
+1.81-0.45*2
+```
+95% confidence interval: the lower limit is 0.91 while the upper limit is 2.71.
+
+e.
+
+2 seconds is among the most plausible values for the population mean hug.
+
+f. For the supporter, 3 second mean hug duration in the population is plausible
+
+
+

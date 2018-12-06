@@ -1,0 +1,12 @@
+1. In each of the following examples, i) indicate which variable is the explanatory variable and which is the response variable and ii) indicate whether the study is an experimental or observational study. Provide a one sentence rational for your answer for i and ii.
+
+a. The anticoagulant warfarin is often used as a pesticide against house mice, Mus musculus. Some populations of the house mouse have acquired a mutation in the vkorc1 gene from hybridizing with the Algerian mouse, M. spretus (Song et al. 2011). In the Algerian mice, this gene confers resistance to warfarin. In a hypothetical follow-up study, researchers collected a sample of house mice to determine whether presence of the vkorc1 mutation is associated with warfarin resistance in house mice as well. They fed warfarin to all the mice in a sample and compared survival between the individuals possessing the mutation and those not possessing the mutation.
+
+### observational study
+
+
+b. Cooley et al. (2009) randomly assigned either of two treatments, naturopathic care (diet counseling, breathing techniques, vitamins and a herbal medicine) or standardized psychotherapy (psychotherapy with breathing techniques and a placebo added), to 81 individuals having moderate to severe anxiety. Anxiety scores decreased an average of 57% in the naturopathic group and 31% in the psychotherapy group.
+
+c. Individuals highly sensitive to rewards tend to experience more food cravings and are more likely to be overweight or develop eating disorders than other people. Beaver et al. (2006) recruited 14 healthy volunteers and scored their reward sensitivity using a questionnaire (they were asked to answer “yes” or “no” to questions like: “I’m always willing to try something new if I think it will be fun”). The subjects were then presented with images of appetizing foods (e.g., chocolate cake, pizza) while activity of their fronto–striatal–amygdala–midbrain was measure during functional MRI. Reward sensitivity of subjects was found to correlate with brain activity in response to the images.
+
+d. Endostatin is a naturally occurring protein in humans and mice that inhibits the growth of blood vessels. O’Reilly et al. (1997) investigated its effects on growth of cancer tumors, whose growth and spread requires blood vessel proliferation. Mice having lung carcinoma tumors were randomly divided into groups that were treated with doses of either 0, 2.5, 10, and 20 mg/kg of endostatin injected once daily. They found that higher doses of endostatin led to inhibition of tumor growth.

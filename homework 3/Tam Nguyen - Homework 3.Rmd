@@ -1,0 +1,49 @@
+---
+title: "Assignment/Homework 3 - Tam Nguyen"
+output: html_document
+  
+---
+
+```{r setup, include = FALSE}
+library(tidyverse)
+library(psych)
+```
+
+#### 1.
+
+0.58, 0.38, 0.25, 0.53
+
+```{r}
+(0.58+0.38+0.25+0.53)/4
+```
+a. the probability is 0.435.
+b. 0.58
+
+#### 3.
+
+#### 4.
+
+info:
+30% cannot detect, 10 out of 12 improve, while 2 reduce. p = 0.5, p not = 0.5,
+
+
+a. they do a two-sided test
+
+b. these probabilities refer to the sampling distribution of the outcome.
+
+c. test statistic value:
+
+d. P-value for the test
+
+#### 5.
+
+a. 4 steps of hypothesis testing
+
+#### 6.
+
+5 cards with diff design
+4/10 correct
+
+
+
+

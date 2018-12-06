@@ -1,9 +1,7 @@
 ---
 title: "Assignment/Homework 1 - Tam Nguyen"
-output:
-  html_notebook: default
-  pdf_document: default
-  word_document: default
+output: html_document
+  
 ---
 
 ```{r setup, include = FALSE}
@@ -130,7 +128,19 @@ a. What type of table is this?
 
 e. Display the frequency distribution in a graph. Which type of graph is most appropriate? Why?
 
-![Frequency distribution of the number of convictions.](Picture1.png)
+```{r}
+graph1 <- data.frame("Number of Convictions" = 0:14, "Frequency" = c(265, 49, 21, 19, 10, 10, 2, 2, 4, 2, 1, 4, 3, 1, 2))
+
+barplot(graph1$Frequency, 
+        axisnames = TRUE,
+        names.arg = graph1$Number.of.Convictions,
+        xlab = "Number of Convictions",
+        ylab = "Frequency")
+
+ggplot(graph1, aes(Number.of.Convictions, Frequency)) +
+  geom_col()
+```
+
 
 ##### bar graph is the most appropiate since the number of convictions is a numeric and dicreet variable and it helps to visualise the frequency of each number of convictions.
 
@@ -160,7 +170,22 @@ b. Identify at least two other features of the graph that make it difficult to i
 
 c. The actual frequencies are 10, 20, 30, and 40. Draw a graph that overcomes the problems identified above.
 
-![A modified graph](Picture2.png)
+```{r}
+graph2 <- data.frame("Group" = c("Group 1", "Group 2", "Group 3", "Group 4"), "Frequency" = c(10, 20, 30, 40))
+
+
+barplot(graph2$Frequency,
+        names.arg = graph2$Group,
+        xlab = "Group",
+        ylab = "Frequency")
+
+ggplot(graph2, aes(Group, Frequency)) +
+  geom_col()
+
+
+```
+
+
 
 
 

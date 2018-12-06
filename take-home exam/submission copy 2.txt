@@ -1,0 +1,23 @@
+## 1.
+
+a. explanatory: mutation vs no mutation, response: survival. This is an observational study because researchers have no control of the mutation.
+b. explanatory: treatment type, response: anxiety score. This is a experimental study because researchers assign treatments to subjects.
+c. explanatory: reward sensitivity, response: brain activity. This is an observational study because researchers have no control over people's reward sentivility.
+d. explanatory: endostatin dose, response: tumor growth. This is an experimental study because researchers assign assign treatments to mices having lung cancer.
+
+## 2.
+
+## 4.
+a. men: SE=6.7/ 4620 =0.10
+women: 4.6/ 6228 =0.06.
+b. Standard deviation, because it describes the spread of the distribution of the variable.
+c. The standard error, because it is the spread of the distribution of sample means. When the standard error is small, the sample mean is closer to the mean of the population. This leads to low uncertainty.
+d. The study did not actually measure number of sexual partners, but merely reported the number that respondents claimed. Perhaps men exaggerate their numbers or women underestimate theirs. Another possibility is that men obtain partners also from women not included in the survey (e.g., prostitutes or women living outside Britain).
+
+## 5.
+9 mother
+8/9 identify correcyly.
+a. Null hypothesis: mothers identify their children's shirts at an equal proportion of 0.5.
+b. Alternative hypothesis: mothers identify their children's shirts at a different proportion than 0.5.
+c. In this case, there is success rate, and binary choices, we choose the binomial test
+d. 

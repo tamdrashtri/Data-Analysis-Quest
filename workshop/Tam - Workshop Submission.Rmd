@@ -1,0 +1,23 @@
+---
+title: "workshop 2"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+```
+
+```{r}
+library(readr)
+mammals <- read_csv("mammals.csv", 
+    na = "")
+View(mammals)
+
+library(skimr)
+library(formattable)
+table(mammals$continent) 
+
+str_replace(mammals$continent, "Af", "AF")
+```
+

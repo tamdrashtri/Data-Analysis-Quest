@@ -1,0 +1,578 @@
+\documentclass[]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\hypersetup{unicode=true,
+            pdftitle={Assignment/Homework 1 - Tam Nguyen},
+            pdfborder={0 0 0},
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{0}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+%%% Use protect on footnotes to avoid problems with footnotes in titles
+\let\rmarkdownfootnote\footnote%
+\def\footnote{\protect\rmarkdownfootnote}
+
+%%% Change title format to be more compact
+\usepackage{titling}
+
+% Create subtitle command for use in maketitle
+\newcommand{\subtitle}[1]{
+  \posttitle{
+    \begin{center}\large#1\end{center}
+    }
+}
+
+\setlength{\droptitle}{-2em}
+
+  \title{Assignment/Homework 1 - Tam Nguyen}
+    \pretitle{\vspace{\droptitle}\centering\huge}
+  \posttitle{\par}
+    \author{}
+    \preauthor{}\postauthor{}
+    \date{}
+    \predate{}\postdate{}
+  
+
+\begin{document}
+\maketitle
+
+\paragraph{1.}\label{section}
+
+Identify whether the following variables are numerical or categorical.
+If numerical, state whether the variable is discrete or continuous. If
+categorical, state whether the categories have a natural order (ordinal)
+or not (nominal).
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  Number of sexual partners in a year
+\end{enumerate}
+
+\subparagraph{numerical, discrete}\label{numerical-discrete}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  Petal area of rose flowers
+\end{enumerate}
+
+\subparagraph{numerical, continuous}\label{numerical-continuous}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  Heart beats per minute of a Tour de France cyclist, averaged over the
+  duration of the race
+\end{enumerate}
+
+\subparagraph{numerical, discrete}\label{numerical-discrete-1}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  Birth weight
+\end{enumerate}
+
+\subparagraph{numerical, continuous}\label{numerical-continuous-1}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\setcounter{enumi}{4}
+\tightlist
+\item
+  Stage of fruit ripeness (e.g., underripe, ripe, or overripe)
+\end{enumerate}
+
+\subparagraph{categorical, nominal}\label{categorical-nominal}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\setcounter{enumi}{5}
+\tightlist
+\item
+  Angle of flower orientation relative to position of the sun
+\end{enumerate}
+
+\subparagraph{numerical , continuous}\label{numerical-continuous-2}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\setcounter{enumi}{6}
+\tightlist
+\item
+  Tree species
+\end{enumerate}
+
+\subparagraph{categorical, nominal}\label{categorical-nominal-1}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\setcounter{enumi}{7}
+\tightlist
+\item
+  Year of birth
+\end{enumerate}
+
+\subparagraph{numerical, discrete}\label{numerical-discrete-2}
+
+\begin{enumerate}
+\def\labelenumi{\roman{enumi}.}
+\tightlist
+\item
+  Gender
+\end{enumerate}
+
+\subparagraph{categorical, nominal}\label{categorical-nominal-2}
+
+\paragraph{2.}\label{section-1}
+
+Not all telephone polls carried out to estimate voter or consumer
+preferences make calls to cell phones. One reason is that in the USA
+automated calls (``robocalls'') to cell phones are not permitted, and
+interviews conducted by humans are more costly.
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  How might the strategy of leaving out cell phones affect the goal of
+  obtaining a random sample of voters or consumers?
+\end{enumerate}
+
+\subparagraph{this might lead to bias. They are members that are
+difficult to collect, but leaving them out will lead to an
+under-representaion of the
+population}\label{this-might-lead-to-bias.-they-are-members-that-are-difficult-to-collect-but-leaving-them-out-will-lead-to-an-under-representaion-of-the-population}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  Which criterion of random sampling is most likely to be violated by
+  the problems you identified in part (a): equal chance of being
+  selected, or the independence of the selection of individuals?
+\end{enumerate}
+
+\subparagraph{equal chance of being selected - these difficult to
+collect individuals might have characteristics differed from the rest of
+the population, so they can be quite
+important.}\label{equal-chance-of-being-selected---these-difficult-to-collect-individuals-might-have-characteristics-differed-from-the-rest-of-the-population-so-they-can-be-quite-important.}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  Which attribute of estimated consumer preference is most affected by
+  the problem you identified in (a): accuracy or precision?
+\end{enumerate}
+
+\subparagraph{this is related to accuracy - the result of the sample not
+properly
+taken.}\label{this-is-related-to-accuracy---the-result-of-the-sample-not-properly-taken.}
+
+\paragraph{3.}\label{section-2}
+
+In each of the following examples, indicate which variable is the
+explanatory variable and which is the response variable.
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  The anticoagulant warfarin is often used as a pesticide against house
+  mice, Mus musculus. Some populations of the house mouse have acquired
+  a mutation in the vkorc1 gene from hybridizing with the Algerian
+  mouse, M. spretus (Song et al. 2011). In the Algerian mice, this gene
+  confers resistance to warfarin. In a hypothetical follow-up study,
+  researchers collected a sample of house mice to determine whether
+  presence of the vkorc1 mutation is associated with warfarin resistance
+  in house mice as well. They fed warfarin to all the mice in a sample
+  and compared survival between the individuals possessing the mutation
+  and those not possessing the mutation.
+\end{enumerate}
+
+\subparagraph{Response variable: survival
+rate}\label{response-variable-survival-rate}
+
+\subparagraph{Explanatory variable: the vkorc1
+mutation}\label{explanatory-variable-the-vkorc1-mutation}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  Cooley et al. (2009) randomly assigned either of two treatments,
+  naturopathic care (diet counseling, breathing techniques, vitamins and
+  a herbal medicine) or standardized psychotherapy (psychotherapy with
+  breathing techniques and a placebo added), to 81 individuals having
+  moderate to severe anxiety. Anxiety scores decreased an average of
+  57\% in the naturopathic group and 31\% in the psychotherapy group.
+\end{enumerate}
+
+\subparagraph{Explanatory variable: naturopathic care, standardized
+psychotherapy}\label{explanatory-variable-naturopathic-care-standardized-psychotherapy}
+
+\subparagraph{Response variable: anxiety
+level}\label{response-variable-anxiety-level}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  Individuals highly sensitive to rewards tend to experience more food
+  cravings and are more likely to be overweight or develop eating
+  disorders than other people. Beaver et al. (2006) recruited 14 healthy
+  volunteers and scored their reward sensitivity using a questionnaire
+  (they were asked to answer ``yes'' or ``no'' to questions like: ``I'm
+  always willing to try something new if I think it will be fun''). The
+  subjects were then presented with images of appetizing foods (e.g.,
+  chocolate cake, pizza) while activity of their
+  fronto--striatal--amygdala--midbrain was measured using functional
+  MRI. Reward sensitivity of subjects was found to correlate with brain
+  activity in response to the images.
+\end{enumerate}
+
+\subparagraph{Explanatory variable: activity of participants'
+fronto--striatal--amygdala--midbrain}\label{explanatory-variable-activity-of-participants-frontostriatalamygdalamidbrain}
+
+\subparagraph{Response variable: reward
+sensitivity}\label{response-variable-reward-sensitivity}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  Endostatin is a naturally occurring protein in humans and mice that
+  inhibits the growth of blood vessels. O'Reilly et al. (1997)
+  investigated its effects on growth of cancer tumors, whose growth and
+  spread requires blood vessel proliferation. Mice having lung carcinoma
+  tumors were randomly divided into groups that were treated with doses
+  of either 0, 2.5, 10, and 20 mg/kg of endostatin injected once daily.
+  They found that higher doses of endostatin led to inhibition of tumor
+  growth.
+\end{enumerate}
+
+\subparagraph{Explanatory variable: doses of
+edostatin}\label{explanatory-variable-doses-of-edostatin}
+
+\subparagraph{Response variable: tumor
+growth}\label{response-variable-tumor-growth}
+
+\paragraph{4.}\label{section-3}
+
+For each of the studies presented in problem 3, indicate whether the
+study is an experimental or observational study.
+
+\subparagraph{1. house mice study: experimental
+study}\label{house-mice-study-experimental-study}
+
+\subparagraph{2. anxiety study: experimental
+study}\label{anxiety-study-experimental-study}
+
+\subparagraph{3. food craving study: observational
+study}\label{food-craving-study-observational-study}
+
+\subparagraph{4. tumor growth study: experimental
+study}\label{tumor-growth-study-experimental-study}
+
+\paragraph{5.}\label{section-4}
+
+The Cambridge Study in Delinquent Development was undertaken in north
+London (UK) to investigate the links between criminal behavior in young
+men and the socioeconomic factors of their upbringing (Farrington 1994).
+A cohort of 395 boys was followed for about 20 years, starting at the
+age of eight or nine. All of the boys attended six schools located near
+the research office. The following table shows the total number of
+criminal convictions by the boys between the start and end of the study.
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  What type of table is this?
+\end{enumerate}
+
+\subparagraph{frequency table}\label{frequency-table}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  How many variables are presented in this table?
+\end{enumerate}
+
+\subparagraph{there is only one numerical variable: number of
+convictions}\label{there-is-only-one-numerical-variable-number-of-convictions}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  How many boys had exactly two convictions by the end of the study?
+\end{enumerate}
+
+\subparagraph{21}\label{section-5}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  What fraction of boys had no convictions?
+\end{enumerate}
+
+\subparagraph{0.67 or 67\% of boys have no
+conviction}\label{or-67-of-boys-have-no-conviction}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\setcounter{enumi}{4}
+\tightlist
+\item
+  Display the frequency distribution in a graph. Which type of graph is
+  most appropriate? Why?
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{graph1 <-}\StringTok{ }\KeywordTok{data.frame}\NormalTok{(}\StringTok{"Number of Convictions"}\NormalTok{ =}\StringTok{ }\DecValTok{0}\OperatorTok{:}\DecValTok{14}\NormalTok{, }\StringTok{"Frequency"}\NormalTok{ =}\StringTok{ }\KeywordTok{c}\NormalTok{(}\DecValTok{265}\NormalTok{, }\DecValTok{49}\NormalTok{, }\DecValTok{21}\NormalTok{, }\DecValTok{19}\NormalTok{, }\DecValTok{10}\NormalTok{, }\DecValTok{10}\NormalTok{, }\DecValTok{2}\NormalTok{, }\DecValTok{2}\NormalTok{, }\DecValTok{4}\NormalTok{, }\DecValTok{2}\NormalTok{, }\DecValTok{1}\NormalTok{, }\DecValTok{4}\NormalTok{, }\DecValTok{3}\NormalTok{, }\DecValTok{1}\NormalTok{, }\DecValTok{2}\NormalTok{))}
+
+\KeywordTok{barplot}\NormalTok{(graph1}\OperatorTok{$}\NormalTok{Frequency, }
+        \DataTypeTok{axisnames =} \OtherTok{TRUE}\NormalTok{,}
+        \DataTypeTok{names.arg =}\NormalTok{ graph1}\OperatorTok{$}\NormalTok{Number.of.Convictions,}
+        \DataTypeTok{xlab =} \StringTok{"Number of Convictions"}\NormalTok{,}
+        \DataTypeTok{ylab =} \StringTok{"Frequency"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Assignment_1_files/figure-latex/unnamed-chunk-1-1.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{ggplot}\NormalTok{(graph1, }\KeywordTok{aes}\NormalTok{(Number.of.Convictions, Frequency)) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{geom_col}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Assignment_1_files/figure-latex/unnamed-chunk-1-2.pdf}
+
+\subparagraph{bar graph is the most appropiate since the number of
+convictions is a numeric and dicreet variable and it helps to visualise
+the frequency of each number of
+convictions.}\label{bar-graph-is-the-most-appropiate-since-the-number-of-convictions-is-a-numeric-and-dicreet-variable-and-it-helps-to-visualise-the-frequency-of-each-number-of-convictions.}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\setcounter{enumi}{5}
+\tightlist
+\item
+  Describe the shape of the frequency distribution. Is it skewed or is
+  it symmetric? Is it unimodal or bimodal? Where is the mode in number
+  of criminal convictions? Are there outliers in the number of
+  convictions?
+\end{enumerate}
+
+\subparagraph{the shape is skewed and it is unimodal. The mode is 0 in
+terms of the number of criminal convictions. 0 conviction is also an
+outlier in the number of conviction because of it large frequency
+compared to the
+rest.}\label{the-shape-is-skewed-and-it-is-unimodal.-the-mode-is-0-in-terms-of-the-number-of-criminal-convictions.-0-conviction-is-also-an-outlier-in-the-number-of-conviction-because-of-it-large-frequency-compared-to-the-rest.}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\setcounter{enumi}{6}
+\tightlist
+\item
+  Does the sample of boys used in this study represent a random sample
+  of British boys? Why or why not?
+\end{enumerate}
+
+\subparagraph{This sample does not represent a random sample because it
+is stated that all the boys are recruited in the study are all located
+near the research office. Boys in other areas are not recruited. So this
+lead to bias and affects the accuracy of the
+sample.}\label{this-sample-does-not-represent-a-random-sample-because-it-is-stated-that-all-the-boys-are-recruited-in-the-study-are-all-located-near-the-research-office.-boys-in-other-areas-are-not-recruited.-so-this-lead-to-bias-and-affects-the-accuracy-of-the-sample.}
+
+\paragraph{6.}\label{section-6}
+
+The following graph was drawn using a very popular spreadsheet program
+in an attempt to show the frequencies of observations in four
+hypothetical groups. Before reading further, estimate by eye the
+frequencies in each of the four groups.
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  Identify two features of this graph that cause it to violate the
+  principle, ``Make patterns in the data easy to see.''
+\end{enumerate}
+
+\subparagraph{1. The angled perspective of the 3D graph makes it
+difficult to judge the bar height by eye. It makes the pattern harder to
+see.}\label{the-angled-perspective-of-the-3d-graph-makes-it-difficult-to-judge-the-bar-height-by-eye.-it-makes-the-pattern-harder-to-see.}
+
+\subparagraph{2. The units in vertical axis cram too many numbers. It
+adds a number in every 5 points. Better to show a number every 10
+points, like 0, 10, 20, 30, 40 instead of 0, 5,
+10\ldots{}}\label{the-units-in-vertical-axis-cram-too-many-numbers.-it-adds-a-number-in-every-5-points.-better-to-show-a-number-every-10-points-like-0-10-20-30-40-instead-of-0-5-10}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  Identify at least two other features of the graph that make it
+  difficult to interpret.
+\end{enumerate}
+
+\subparagraph{1. Graphical elements are not clearly labeled. The
+vertical axis is not
+labeled.}\label{graphical-elements-are-not-clearly-labeled.-the-vertical-axis-is-not-labeled.}
+
+\subparagraph{2. the colors, shapes and shadows of this graph make it
+overcomplicated while not communicating any further information. Colors
+in this graph are also not differ in intensity and shapes, making it
+hard for readers to distinguish between groups in the graph. The shape
+of this graph is shaped like cones, making it harder to know where is
+the exact point of frequency to line up with the vertical
+axis.}\label{the-colors-shapes-and-shadows-of-this-graph-make-it-overcomplicated-while-not-communicating-any-further-information.-colors-in-this-graph-are-also-not-differ-in-intensity-and-shapes-making-it-hard-for-readers-to-distinguish-between-groups-in-the-graph.-the-shape-of-this-graph-is-shaped-like-cones-making-it-harder-to-know-where-is-the-exact-point-of-frequency-to-line-up-with-the-vertical-axis.}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  The actual frequencies are 10, 20, 30, and 40. Draw a graph that
+  overcomes the problems identified above.
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{graph2 <-}\StringTok{ }\KeywordTok{data.frame}\NormalTok{(}\StringTok{"Group"}\NormalTok{ =}\StringTok{ }\KeywordTok{c}\NormalTok{(}\StringTok{"Group 1"}\NormalTok{, }\StringTok{"Group 2"}\NormalTok{, }\StringTok{"Group 3"}\NormalTok{, }\StringTok{"Group 4"}\NormalTok{), }\StringTok{"Frequency"}\NormalTok{ =}\StringTok{ }\KeywordTok{c}\NormalTok{(}\DecValTok{10}\NormalTok{, }\DecValTok{20}\NormalTok{, }\DecValTok{30}\NormalTok{, }\DecValTok{40}\NormalTok{))}
+
+
+\KeywordTok{barplot}\NormalTok{(graph2}\OperatorTok{$}\NormalTok{Frequency,}
+        \DataTypeTok{names.arg =}\NormalTok{ graph2}\OperatorTok{$}\NormalTok{Group,}
+        \DataTypeTok{xlab =} \StringTok{"Group"}\NormalTok{,}
+        \DataTypeTok{ylab =} \StringTok{"Frequency"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Assignment_1_files/figure-latex/unnamed-chunk-2-1.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{ggplot}\NormalTok{(graph2, }\KeywordTok{aes}\NormalTok{(Group, Frequency)) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{geom_col}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Assignment_1_files/figure-latex/unnamed-chunk-2-2.pdf}
+
+
+\end{document}
